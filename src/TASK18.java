@@ -1,3 +1,4 @@
+
 public class TASK18 {
     static void main(String[] args) {
         int[] arr = {1,2,6,7,8,7};
