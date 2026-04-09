@@ -1,22 +1,31 @@
-import java.util.Arrays;
+import  java.util.Arrays;
 public class TASK11 {
-    static void main(String[] args) {
-        int[] arr = {1, 2, 10, 4, 10, 2};
-        System.out.println(Arrays.toString (withoutTen(arr)));
+    public static void main(String[] args) {
+        int[] arr = {10, 10, 10, 1, 2, 3, 4};
+        System.out.println(Arrays.toString(withoutTen(arr)));
 
     }
-    public static int[]withoutTen(int[] arr){
-        int index = 0;
-        for (int i = 0;i <arr.length;i++){
-            if (arr[i] != 10){
-                arr[index]=arr[i];
-            index++;
+
+    public static int[] withoutTen(int[] arr) {
+        int count = 0;
+        int j = 0;
+        int[] arrNew = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 10) {
+                count++;
+            } else {
+                arrNew[j] = arr[i];
+                j++;
             }
         }
-        for (int i = index;i< arr.length; i++){
-            arr[i]=0;
+        for (int i = arr.length - count; i < arr.length; i++) {
+            arrNew[i] = 0;
         }
-        return arr;
+        return arrNew;
 
     }
 }
+
+
+
+
